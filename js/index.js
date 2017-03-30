@@ -20,7 +20,7 @@ $('.four-oh-four-form').on('submit', function(e) {
   } else if (val === 'puppies') {
     showPuppies();
   } else {
-    resetFormKittens(true);
+    resetFormKittens(false);
   }
 });
 
