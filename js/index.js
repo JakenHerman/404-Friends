@@ -24,7 +24,7 @@ $('.four-oh-four-form').on('submit', function(e) {
   }
 });
 
-function resetForm(withKittens) {
+function resetFormKittens(withKittens) {
   var message = "Sorry that command is not recognized."
   var input = $('.404-input');
 
@@ -89,7 +89,7 @@ function showPuppies() {
     $.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=puppies', function(result) {
       gif = result.data.image_url;
       $('.terminal').append('<img class="kitten-gif" src="' + gif + '"">');
-      resetForm(true);
+      resetFormPuppy(true);
     });
   }, (lines.length * 100) + 1000);
 }
@@ -120,7 +120,7 @@ function showKittens() {
     $.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kittens', function(result) {
       gif = result.data.image_url;
       $('.terminal').append('<img class="kitten-gif" src="' + gif + '"">');
-      resetForm(true);
+      resetFormKittens(true);
     });
   }, (lines.length * 100) + 1000);
 }
